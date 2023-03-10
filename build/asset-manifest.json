@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c4f491d.css",
-    "main.js": "/static/js/main.7adb05cc.js",
+    "main.css": "/static/css/main.470fd6a3.css",
+    "main.js": "/static/js/main.2da6d441.js",
     "static/media/rental.jpg": "/static/media/rental.5b2e60aad8216a9c9363.jpg",
-    "static/media/mainHouse.jpg": "/static/media/mainHouse.4fe71fce70a1c9555ed8.jpg",
-    "static/media/forSale.jpg": "/static/media/forSale.0a9fdb37d2e778b263d6.jpg",
-    "static/media/marketUpdate.jpg": "/static/media/marketUpdate.836a1496479660459486.jpg",
+    "static/media/forSale.jpg": "/static/media/forSale.8c1d3d228d6677fabf02.jpg",
+    "static/media/mainHouse.jpg": "/static/media/mainHouse.01c51a94379802c60d2d.jpg",
+    "static/media/marketUpdate.jpg": "/static/media/marketUpdate.6f2328dffd389c53aada.jpg",
+    "static/media/bluefin-logo.png": "/static/media/bluefin-logo.b60b550f8a7e5a60a637.png",
     "index.html": "/index.html",
-    "main.2c4f491d.css.map": "/static/css/main.2c4f491d.css.map",
-    "main.7adb05cc.js.map": "/static/js/main.7adb05cc.js.map"
+    "main.470fd6a3.css.map": "/static/css/main.470fd6a3.css.map",
+    "main.2da6d441.js.map": "/static/js/main.2da6d441.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c4f491d.css",
-    "static/js/main.7adb05cc.js"
+    "static/css/main.470fd6a3.css",
+    "static/js/main.2da6d441.js"
   ]
 }
