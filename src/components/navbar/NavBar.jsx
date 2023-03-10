@@ -17,15 +17,16 @@ const NavBar = () => {
       setbtnColor("#333");
       setBtnBorderColor("2px solid #333");
     }
-  });
+  }, []); // add empty array as second argument
 
   useEffect(() => {
-    if (window.innerWidth <= 1000) {
+    if (window.location.pathname === "/listings") {
       setALink("#333");
       setbtnColor("#333");
       setBtnBorderColor("2px solid #333");
     }
-  });
+  }, []); // add empty array as second argument
+
 
   const handleClick = () => {
     setClick(!click);
@@ -33,6 +34,10 @@ const NavBar = () => {
 
   const returnHome = () => {
     window.location = "/";
+  };
+
+  const handleSignUp = () => {
+    window.location = "https://spearrealestate.homes/signup";
   };
 
   return (
@@ -49,22 +54,22 @@ const NavBar = () => {
         </div>
         <div className={click ? "menu-container active" : "menu-container"}>
           <ul className="nav-menu">
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Buy
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Rent
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Sell
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Mortgage
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Real Estate Agents
             </a>
-            <a className="aLinks" href="/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Feed
             </a>
           </ul>
@@ -77,6 +82,7 @@ const NavBar = () => {
           <button
             className="btn"
             style={{ color: `${btnColor}`, border: `${btnBorderColor}` }}
+            onClick={handleSignUp}
           >
             Sign Up
           </button>
