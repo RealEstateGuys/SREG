@@ -14,8 +14,8 @@ const CtaSection = () => {
         <div className="verbiage">
           <h2> Sell for more than the house next door </h2>
           <p>
-            Local Bluefin Agents price your home right and make it shine online.
-            Get started with a free consultation.
+            Agents who will price your home right and make it shine online.
+            Get started on your next chapter today.
           </p>
           <form className="search">
             <input type="text" placeholder=" Enter your street address" />
@@ -25,10 +25,9 @@ const CtaSection = () => {
       </div>
       <div className="Section">
         <div className="verbiage">
-          <h2> Your perfect rental is now on Bluefin </h2>
+          <h2> Find your next rental property </h2>
           <p>
-            Finding the apartment, condo, or house you’ll love to rent just got
-            easier.
+            Join hundreds of investors that let us improve their portfolios. 
           </p>
           <form className="search">
             <input

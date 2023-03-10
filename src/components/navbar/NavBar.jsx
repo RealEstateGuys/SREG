@@ -8,8 +8,8 @@ import "./Navbar.css";
 const NavBar = () => {
   const [click, setClick] = useState(false);
   const [alink, setALink] = useState("#fff");
-  const [btnColor, setbtnColor] = useState("#fff");
-  const [btnBorderColor, setBtnBorderColor] = useState("2px solid #fff");
+  const [btnColor, setbtnColor] = useState("");
+  const [btnBorderColor, setBtnBorderColor] = useState("2px solid");
 
   useEffect(() => {
     if (window.location.pathname === "/listings") {
@@ -54,7 +54,7 @@ const NavBar = () => {
         </div>
         <div className={click ? "menu-container active" : "menu-container"}>
           <ul className="nav-menu">
-            <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
+            <a className="aLinks" href= "/listings" style={{ color: `${alink}` }}>
               Buy
             </a>
             <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
@@ -64,10 +64,10 @@ const NavBar = () => {
               Sell
             </a>
             <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
-              Mortgage
+              Financing
             </a>
             <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
-              Real Estate Agents
+              Agents
             </a>
             <a className="aLinks" href="https://spearrealestate.homes/" style={{ color: `${alink}` }}>
               Feed
