@@ -7,23 +7,20 @@ const SearchBar = ({ fetchListings }) => {
   const [query, setQuery] = useState("");
 
   const onSubmit = (e) => {
-    if (query === "") {
-      alert("Please enter a valid input");
-    } else {
-      e.preventDefault();
-      fetchListings(query);
-    }
+    e.preventDefault();
+    fetchListings(query);
   };
 
-  const onChange = (e) => {
-    setQuery(e.target.value);
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
   };
+
   return (
     <div className="searchBar">
       <form className="sBar" onSubmit={onSubmit}>
         <input
           value={query}
-          onChange={onChange}
+          onChange={handleInputChange}
           type="text"
           placeholder=" City, Address, School, Agent, ZIP"
         />

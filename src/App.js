@@ -10,6 +10,7 @@ function App() {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(false);
   const [sortOrder, setSortOrder] = useState(2);
+  const [filters, setFilters] = useState({ minPrice: '', maxPrice: '', bedsMin: '' });
 
   const length = listings.length;
   console.log(length + " this is the length");
@@ -17,7 +18,7 @@ function App() {
   const host = "zillow-com1.p.rapidapi.com";
   const key = process.env.REACT_APP_API_BLUEFIN_ZILLOW_API_KEY;
 
-  const fetchListings = (query) => {
+  const fetchListings = (query, filters) => {
     setLoading(true);
     var options = {
       method: "GET",
@@ -28,11 +29,24 @@ function App() {
       },
     };
 
+    if (filters.minPrice) {
+      options.url += `&minPrice=${filters.minPrice}`;
+    }
+    if (filters.maxPrice) {
+      options.url += `&maxPrice=${filters.maxPrice}`;
+    }
+    if (filters.bedsMin) {
+      options.url += `&bedsMin=${filters.bedsMin}`;
+    }
+    if (filters.bathsMin) {
+      options.url += `&bathsMin=${filters.bathsMin}`;
+    }
+  
     axios
       .request(options)
       .then((response) => {
         let props = response.data.props;
-
+  
         props = props.sort((a, b) => {
           if (sortOrder === 1) {
             return a.price > b.price ? 1 : -1;
@@ -46,6 +60,10 @@ function App() {
       .catch((error) => {
         console.error(error);
       });
+  };
+
+  const handleFiltersChange = (newFilters) => {
+    setFilters(newFilters);
   };
 
   const router = createBrowserRouter([
@@ -66,6 +84,8 @@ function App() {
           fetchListings={fetchListings}
           listings={listings}
           loading={loading}
+          filters={filters}
+          onFiltersChange={handleFiltersChange}
         />
       ),
     },
