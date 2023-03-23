@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BluefinLogo from "../../../src/assets/bluefin-logo.png";
+import SREGLogo from "../../../src/assets/logo-black.png";
 
 import "./Modal.css";
 
@@ -12,10 +12,10 @@ const Modal = ({ open, children, onClose }) => {
         <div className="modalContainer">
           <div>
             <div className="modalHeader">
+            <img src={SREGLogo} alt="/" width="75px" height="auto" />
               <button onClick={onClose} className="btn">
                 Close
-              </button>
-              <img src={BluefinLogo} alt="/" width="75px" height="auto" />
+              </button>              
             </div>
             <div>{children}</div>
           </div>

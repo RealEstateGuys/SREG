@@ -4,12 +4,12 @@
 }
 
 .ctaSection img {
-  width: 550px;
+  width: 90vmin;
   height: auto;
 }
 
 .ctaSection input {
-  width: 450px;
+  width: 35vw;
   height: auto;
   border: 1px solid #b2b2b2;
 }
@@ -26,7 +26,7 @@
   border-radius: 30px;
   border: 1px solid #8F9092;
   transition: all 0.2s ease;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Serif", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #606060;
@@ -55,6 +55,7 @@
   justify-content: space-evenly;
   width: 100%;
   margin: 20px 0px;
+  padding-bottom: 150px;
 }
 
 .verbiage {
@@ -62,34 +63,44 @@
   width: 35%;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 10px;
-  margin: 5px 0px;
+  padding: 0px;
+  margin: 75px;
+  color: #606060;
+
 }
 
 @media only screen and (max-width: 920px) {
   .Section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    box-sizing: border-box;
+
   }
 
   .ctaSection img {
-    width: 95%;
+    width: 50vmin;
     height: auto;
+    padding: 15px;
+    padding-left: 5px;
   }
+
   .verbiage {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
   }
+
   h2 {
     font-size: x-large;
     margin: 5px 0px;
+    color: #606060;
   }
 
   p {
     margin: 5px 0px;
+
   }
 
   .search {
@@ -101,7 +112,8 @@
   .searchBtn .icon {
     font-size: x-large;
     display: inline;
-    color: #fff;
-    margin: 0;
+    color: #606060;
+    margin: 0px;
   }
+
 }

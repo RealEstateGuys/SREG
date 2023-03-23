@@ -2,10 +2,9 @@ import React from "react";
 import {
   FaFacebookSquare,
   FaInstagram,
-  FaTwitter,
-  FaPinterest,
+  FaLinkedin,
 } from "react-icons/fa";
-import Logo from "../..//assets/bluefin-logo.png";
+import Logo from "../..//assets/logo-black.png";
 
 import "./Footer.css";
 
@@ -16,29 +15,22 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
-        <div className="col">
-          <a href="/">About</a>
-          <a href="/">Bestimates</a>
-          <a href="/">Mortgage</a>
-          <a href="/">Planning</a>
-          <a href="/">Advertise</a>
-        </div>
       </div>
       <img
-        alt="logo"
+        alt="Spear-Real-Estate_logo"
         src={Logo}
         height="100px"
         onClick={returnHome}
-        className="bluefin-logo"
+        className="SREG-Logo"
       />
       <div className="social">
         <FaFacebookSquare />
         <FaInstagram />
-        <FaTwitter />
-        <FaPinterest />
+        <FaLinkedin />
+    
       </div>
       <img
-        src="https://s.zillowstatic.com/pfs/static/footer-art.svg"
+        src="https://spearrealestategroup.squarespace.com/s/footer-art.png"
         type="image/svg+xml"
         alt="Footer art"
         focusable="false"

@@ -1,10 +1,27 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import ForSale from "../../assets/forSale.jpg";
+import ForSale from "../../assets/forSale.png";
 import MarketUpdate from "../../assets/marketUpdate.jpg";
 import Rental from "../../assets/rental.jpg";
 
 import "./CtaSection.css";
+
+const handleSearchSubmit = (event) => {
+  event.preventDefault(); // prevent form from submitting normally
+  const searchQuery = event.target[0].value;
+  window.location.href = `https://rent.report/spearrealestategroup?query=${searchQuery}`;
+};
+
+const handleSellerClick = () => {
+  window.location.href = "https://spearrealestate.homes/sellers";
+};
+
+const handleKeyPress = (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    event.target.nextSibling.click();
+  }
+};
 
 const CtaSection = () => {
   return (
@@ -17,39 +34,40 @@ const CtaSection = () => {
             Agents who will price your home right and make it shine online.
             Get started on your next chapter today.
           </p>
-          <form className="search">
-            <input type="text" placeholder=" Enter your street address" />
-            <button disabled>Next</button>
-          </form>
+          <button className="sellBtn" onClick={handleSellerClick}>
+            Sell for more
+          </button>
         </div>
       </div>
       <div className="Section">
         <div className="verbiage">
-          <h2> Find your next rental property </h2>
+          <h2> Analyze Investment Deals </h2>
           <p>
-            Join hundreds of investors that let us improve their portfolios. 
+            Take control of your financial future and live life on your own terms with real estate investing.
           </p>
-          <form className="search">
+          <form className="search" onSubmit={handleSearchSubmit}>
             <input
               type="text"
               placeholder="City, Address, School, Agent, ZIP"
+              onKeyPress={handleKeyPress}
             />
-            <button className="searchBtn" disabled>
+            <button className="searchBtn">
               <AiOutlineSearch className="icon" />
             </button>
           </form>
         </div>
-        <img alt="for sale house" src={Rental} />
+        <img alt="rental property for sale" src={Rental} />
       </div>
       <div className="Section">
-        <img alt="for sale house" src={MarketUpdate} />
+        <img alt="cat reading the news" src={MarketUpdate} />
         <div className="verbiage">
-          <h2> Get real-time market updates </h2>
+          <h2> Know The Important Stuff. </h2>
           <p>
-            We’re bringing you the latest on how COVID-19 is impacting the real
-            estate market.
+            We focus on all the key market trends, so you can focus on what's important to you.
           </p>
-          <button disabled>Housing News</button>
+          <a href="https://SpearRealEstate.homes/blog">
+            <button>Stay Informed</button>
+          </a>
         </div>
       </div>
     </div>

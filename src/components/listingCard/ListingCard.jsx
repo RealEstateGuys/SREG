@@ -15,29 +15,29 @@ const ListingCard = ({ listings }) => {
         key={listings.zpid}
         className="listingCard"
       >
-        <img src={listings.imgSrc} alt="/" />
+        <img src={listings.imgSrc} alt={`Listing: ${listings.address}`} />
         <div className="listingText">
           <h3>${listings?.price.toLocaleString()}</h3>
           <p>
             {listings.bedrooms} Bed | {listings.bathrooms} Bath |{" "}
             {listings.livingArea} Sq.Ft{" "}
           </p>
-          <p> {listings.address} </p>
+          <h1>{listings.address}</h1>
         </div>
       </div>
 
       {/* MODAL */}
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
         <div className="popupContainer">
-          <div>
-            <img src={listings.imgSrc} alt="/" height="auto" />
+          <div className="popupLeft">
+            <img src={listings.imgSrc} alt={`Listing: ${listings.address}`} height="auto" />
           </div>
           <div className="popupRight">
             <h2>${listings.price.toLocaleString()} </h2>
             <p>
               {listings.bedrooms} Beds | {listings.bathrooms} Baths | {listings.livingArea} Sqft
             </p>
-            <p> {listings.address} </p>
+            <h1>{listings.address}</h1>
             <GoogleMapReact
               bootstrapURLKeys={{
                 key: process.env.REACT_APP_API_BLUEFIN_GOOGLE_MAPS_KEY,

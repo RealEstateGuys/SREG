@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 import "./SearchBar.css";
 
-const SearchBar = ({ fetchListings }) => {
+const SearchBar = ({ fetchListings, setFilters, filters }) => {
   const [query, setQuery] = useState("");
 
   const onSubmit = (e) => {
@@ -11,6 +11,42 @@ const SearchBar = ({ fetchListings }) => {
       alert("Please enter a valid input");
     } else {
       e.preventDefault();
+      // Reset filters when a new search is submitted
+      setFilters({
+        ...filters,
+        status_type: "",
+        sort: "",
+        minPrice: "",
+        maxPrice: "",
+        rentMinPrice: "",
+        rentMaxPrice: "",
+        bathsMin: "",
+        bathsMax: "",
+        bedsMin: "",
+        bedsMax: "",
+        sqftMin: "",
+        sqftMax: "",
+        buildYearMin: "",
+        buildYearMax: "",
+        daysOn: "",
+        soldInLast: "",
+        isBasementFinished: "",
+        isBasementUnfinished: "",
+        isPendingUnderContract: "",
+        isAcceptingBackupOffers: "",
+        isComingSoon: "",
+        isNewConstruction: "",
+        isForSaleForeclosure: "",
+        isWaterfront: "",
+        hasPool: "",
+        hasAirConditioning: "",
+        isCityView: "",
+        isMountainView: "",
+        isWaterView: "",
+        isParkView: "",
+        isOpenHousesOnly: "",
+        is3dHome: "",
+      });
       fetchListings(query);
     }
   };

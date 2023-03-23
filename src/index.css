@@ -10,15 +10,18 @@
 
 h1 {
   font-weight: 600;
+  
+  
 }
 
 h2 {
   font-size: 32px;
   font-weight: 600;
+  margin-top: 50px;
 }
 
 p {
-  color: #333;
+  color: #999;
 }
 
 ul {
@@ -29,10 +32,10 @@ a {
   text-decoration: none;
 }
 
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
 }
 
 .containter {
@@ -60,7 +63,7 @@ button.btn {
   border: 1px solid #8F9092;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Serif", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #606060;
@@ -84,7 +87,7 @@ button.btn:focus {
 }
 
 
-.bluefin-logo {
+.SREG-Logo {
   cursor: pointer;
   padding: 0px 24px;
 }
@@ -102,6 +105,5 @@ button.btn:focus {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 10em;
 }
-
-

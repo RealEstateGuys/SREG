@@ -8,17 +8,19 @@ import "./Map.css";
 const Map = ({ center, zoom, listings }) => {
   const [centerObj, setCenter] = useState(center);
   const [selected, setSelected] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   const handleClick = () => {
     setSelected(null);
   };
 
   useEffect(() => {
-    if (listings && listings.length > 0) {
+    if (!isMounted && listings && listings.length > 0) {
       const obj = { lat: listings[0].latitude, lng: listings[0].longitude };
       setCenter(obj);
+      setIsMounted(true);
     }
-  }, [listings]);
+  }, [isMounted, listings]);
 
   return (
     <>
@@ -60,8 +62,8 @@ const Map = ({ center, zoom, listings }) => {
 
 Map.defaultProps = {
   center: {
-    lat: 34.052235,
-    lng: -118.243683,
+    lat: 45.523064,
+    lng: -122.676483,
   },
   zoom: 11,
 };

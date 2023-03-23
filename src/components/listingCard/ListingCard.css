@@ -2,6 +2,7 @@
   border: 1px solid #d3d3d3;
   border-radius: 4px;
   box-shadow: 5px 5px 18px #d3d3d3;
+
 }
 
 .listingCard:hover {
@@ -11,8 +12,23 @@
 }
 
 .listingText {
-  padding: 1rem;
+  padding: .25rem;
+  display:inline-block;
 }
+
+.listingText h1 {
+  font-size: 14px;
+  font-weight:400;
+  }
+  
+  .listingText h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .listingText p {
+    font-size: 14px;
+  }
 
 .listingCard img {
   width: 100%;
@@ -22,27 +38,67 @@
 .popupContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 15px;
+  padding: 0.5em;
+  overflow: auto;
 }
 
 .popupContainer img {
-  width: 500px;
+  width: 400px;
+}
+
+.popupLeft {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: .25em;
+}
+
+.popupLeft img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
 .popupRight {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding: 5px;
+  padding-inline-start: 0.25em;
+  flex-wrap: nowrap;
+  align-items: baseline;
 }
 
-.popupRight p {
-  margin: 8px;
+.popupRight h1 {
+  margin: 5px;
+  font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .popupRight h2 {
-  margin: 10px;
+  margin: 5px;
+  font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  display: inline-block;
+}
+
+.popupRight h2::after {
+  content: "|";
+  margin: 0 8px;
+
+}
+
+.popupRight p {
+  margin: 0;
+  font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.popupRight h1:first-child {
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 760px) {

@@ -9,7 +9,7 @@
 }
 
 .modalContainer {
-  position: fixed;
+  position:fixed;
   top: 20%;
   left: 50%;
   right: -50%;
@@ -19,12 +19,19 @@
   background: #FFF;
   border-radius: 12px;
   z-index: 1000;
+  width: 60rem;
+  height: 50rem;
 }
 
 .modalHeader{
     display: flex;
     justify-content: space-between;
     margin-right: 30px;
+}
+
+.modalHeader img{
+  margin: 0.25em;
+  margin-left: 0.75em;
 }
 
 @media only screen and (max-width: 760px) {
